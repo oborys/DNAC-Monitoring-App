@@ -1,0 +1,28 @@
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+./manage.py migrate
+cd app/vueapp
+
+npm i
+npm run build
+cd ../..
+
+./manage.py collectstatic
+./manage.py createsuperuser
+
+./manage.py runserver
+
+First, you need to create User profile for created superuser:
+go to http://localhost:8000/admin/ and create userprofile
+
+#in another terminal
+redis-server
+
+#in another terminal
+source venv/bin/activate
+celery -A project worker -l info
+
+#in another terminal
+source venv/bin/activate
+celery -A project beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
