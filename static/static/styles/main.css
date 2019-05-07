@@ -1,0 +1,96 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+}
+
+nav {
+    /*margin-bottom: 20px;*/
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+    background-color: #fafafa;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+input {
+    background: red;
+}
+
+textarea {
+    height: auto;
+}
+
+p.text-justify {
+    text-align: justify;
+}
+
+.container {
+    padding: 0 !important;
+}
+
+.login {
+    padding: 0 10px;
+}
+
+#app {
+    text-align: none;
+}
+
+#app input {
+    border: none;
+}
+
+#app input:focus {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#app .menu__content--select > .card {
+    margin: 0;
+}
+
+.link .link-content > span {
+    color: red;
+}
+
+.index-content {
+    margin-top: 30px;
+}
+
+.error-card {
+    margin: 30px auto;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.no-margin.card  {
+    margin: 0;
+}
+
+/* Fix vuetify colission with footer */
+.application--wrap {
+    min-height: auto !important;
+}
+
+.chip--removable {
+    top: 20px;
+    padding: 20px;
+}
+
+div.input-group__input > input {
+    height: 1em !important;
+}

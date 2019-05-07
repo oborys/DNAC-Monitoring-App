@@ -2,21 +2,25 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ./manage.py migrate
-cd app/vueapp
 
+cd app/vueapp
 npm i
 npm run build
 cd ../..
 
 ./manage.py collectstatic
 ./manage.py createsuperuser
-
+# password must contain at least 8 characters
 ./manage.py runserver
 
 First, you need to create User profile for created superuser:
-go to http://localhost:8000/admin/ and create userprofile
+go to http://localhost:8000/admin/
+Click on User profiles --> Add user profile --> Select user (chose superuser name that you create before) --> Select role (Admin) --> Push Save
+and create userprofile
 
 #in another terminal
+#install redis for mac: brew install redis
+#install redis for linux: sudo apt-get install redis-server
 redis-server
 
 #in another terminal

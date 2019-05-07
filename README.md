@@ -12,10 +12,8 @@ DNAC Monitoring App extends the basic features of [DNA-C](https://www.cisco.com/
 - Average MTTR (Mean time to repair); 
 - Average mean time to recover incident; 
 
-Registration and schedule of the hackathon you can find [here](https://www.cisco.com/c/m/uk_ua/training-events/2018/hackathon/index.html)
-
 ## The main features
-1. an application that can collect and process data from DNA-C
+1. An application that can collect and process data from DNA-C
 2. User-friendly interface 
 
 3. You can add and manage different type of roles:
@@ -37,26 +35,43 @@ Registration and schedule of the hackathon you can find [here](https://www.cisco
     - rejected
     - solved
  
-- Notifications module for sending alerts via (Webex Teams)[https://www.webex.com/team-collaboration.html] and Email 
+- Notifications module:
+    - sending alerts via [Webex Teams](https://www.webex.com/team-collaboration.html)
+    - Email 
 - Collect and display inventory and topology from DNA-C 
 
 ## Install and run locally 
 
-You need to install Python 3+, Vue.js
+You need to install [Python 3+](https://realpython.com/installing-python/), [Vue.js](https://v1.vuejs.org/guide/installation.html)
 
-in terminal 
+
+In developer mode, open project in IDE/terminal
 
 `git clone https://github.com/oborys/DNAC-Monitoring-App.git`
 
 then open file usage.txt and run commands
 
-After deployment, you need to add a network controller (DNA-C) credentials
+For correct using of notification module you need to create your Bot
+[Sign-up](https://www.webex.com/pricing/free-trial.html) and [Sign-in](https://teams.webex.com/signin) in Webex Teams
+Go to [https://developer.webex.com/](https://developer.webex.com/), then click [My Apps](https://developer.webex.com/my-apps) and Create a New App (Bot)
+
+Copy and save Bot's Access Token
+![](img/DNAC_App_Bot_Token.png)
+
+Then add email credential (EMAIL_HOST, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, EMAIL_PORT) in project/settings.py
+Uncomment send_mail function in  file info_sender/email_sender.py
+For example you can use [Gmail to send email](https://support.google.com/a/answer/176600?hl=en) from App
+
+After deployment, you need to add a network controller (DNA-C) credentials (in case of local deployment http://localhost:8000/app/#/settings)
 
 ![](img/DNAC_App_credentials.png)
 
 Ticket management  
 ![](img/DNAC_App_ticket_management.png)
 
+Edit/modify front-end files
+For edit information in static files go to static/templates (you can find three html file index.html, app.html, base.html)
+For edit vue files go to app/src/components
 
 
 ## Test App using Cisco DevNet sandboxes

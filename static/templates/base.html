@@ -1,0 +1,66 @@
+{% load static %}
+{% load render_bundle from webpack_loader %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+    <meta charset="UTF-8">
+
+    <title>DNAC Monitoring App</title>
+    {% if debug == False %}
+    {% render_bundle 'app' 'css' %}
+    {% endif %}
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+<nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" href="/app/" class="brand-logo">DNAC Monitoring App</a>
+        <ul class="right">
+            {% if user.is_authenticated %}
+            <li>
+                <span class="login">{{ user.get_username }} <u>{{ profile.role.role }}</u></span>
+            </li>
+            <li>
+                <a href="{% url 'logout' %}">Log out</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="{% url 'login' %}">Sign in</a>
+            </li>
+            <li>
+                <a href="{% url 'registration' %}">Sign up</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+<footer class="page-footer orange">
+    <div class="footer-copyright">
+        <div class="container">
+            <p href=""
+               class=" text-lighten-3">DNA-C
+
+               MONITORING AND REPORT SYSTEM</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+{% block js %}
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load render_bundle from webpack_loader %}
+{% load static %}
+
+{% block head %}
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet" type="text/css">
+    {% render_bundle 'app' 'css' %}
+{% endblock %}
+
+{% block content %}
+    <div id="app"></div>
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript"> window.role = "{{ user_role }}"; window.username = "{{ user }}" </script>
+    {% if debug == True %}
+        <script type="text/javascript" src="http://localhost:8080/app.js"></script>
+    {% else %}
+        {% render_bundle 'manifest' 'js' %}
+        {% render_bundle 'vendor' 'js' %}
+        {% render_bundle 'app' 'js' %}
+    {% endif %}
+{% endblock %}

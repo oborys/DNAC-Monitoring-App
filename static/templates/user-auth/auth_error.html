@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="card center error-card">
+			<div class="card-content">
+				<h4>{% trans "Registration error." %}</h4>
+				<span>{{ error }}</span>
+			</div>
+
+		</div>
+	</div>
+</div>
+{% endblock %}

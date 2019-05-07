@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <div class="row">
+        <div class="col s6 offset-s3">
+            <h4 class="center">Registration</h4>
+            <form method="post" action="/registration/" id="registration-form">
+                {% csrf_token %}
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="login" name="login" required>
+                        <label for="login">Login</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="password" id="password" name="pass" required>
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="password" id="repeat-password" name="conf-pass" required>
+                        <label for="repeat-password">Repeat password</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="first-name" name="first_name" required>
+                        <label for="first-name">First name</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="second-name" name="second_name" required>
+                        <label for="second-name">Second name</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select name="role" id="role-select" required>
+                            <option value="" disabled selected></option>
+                            {% for role in roles %}
+                                <option value="{{ role }}">{{ role }}</option>
+                            {% endfor %}
+                        </select>
+                        <label for="role-select">Select account type</label>
+                    </div>
+                </div>
+                <div class="row center">
+                    {#                    <button id="submit" class="btn-small waves-effect waves-light">submit</button>#}
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var select = $('#role-select').formSelect();
+        });
+    </script>
+
+{% endblock %}
