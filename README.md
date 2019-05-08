@@ -1,7 +1,5 @@
 # DNAC Monitoring App
 
-You can choose one (main) directions:
-
   - [About this App](#about_this_app)
   - [The main featuresg](#the_main_features)
   - [Install and run locally ](#install_and_run_locally )
@@ -51,7 +49,7 @@ In developer mode, open project in IDE/terminal
 
 then open file usage.txt and run commands
 
-For correct using of notification module you need to create your Bot
+For correct using of notification module, you need to create your Bot
 [Sign-up](https://www.webex.com/pricing/free-trial.html) and [Sign-in](https://teams.webex.com/signin) in Webex Teams
 Go to [https://developer.webex.com/](https://developer.webex.com/), then click [My Apps](https://developer.webex.com/my-apps) and Create a New App (Bot)
 
@@ -69,16 +67,16 @@ After deployment, you need to add a network controller (DNA-C) credentials (in c
 Ticket management  
 ![](img/DNAC_App_ticket_management.png)
 
-Edit/modify front-end files
-For edit information in static files go to static/templates (you can find three html file index.html, app.html, base.html)
-For edit vue files go to app/src/components
+Edit/modify front-end files:
+- For edit information in static files go to static/templates (you can find three html file index.html, app.html, base.html)
+- For edit vue files go to app/src/components
 
 
 ## Test App using Cisco DevNet sandboxes
 
 Available [sandboxes by Networking category](https://devnetsandbox.cisco.com/RM/Topology?c=14ec7ccf-2988-474e-a135-1e90b9bc6caf)
 
-In this direction you can also use DNA-C (Digital Network Architecture Center) sandboxes
+In this direction, you can also use DNA-C (Digital Network Architecture Center) sandboxes
 
 DNA-C 1.2.10 - [https://sandboxdnac2.cisco.com/](https://sandboxdnac2.cisco.com/)
 
