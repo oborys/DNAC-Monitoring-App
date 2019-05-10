@@ -77,9 +77,13 @@ Click on User profiles --> Add user profile --> Select user (chose superuser nam
 ![](img/DNAC_App_create_user_profile.png)
 
 open new terminal tab and run the commands
+
 install redis for mac: 
+
 `brew install redis`
+
 install redis for linux: 
+
 `sudo apt-get install redis-server`
 
 `redis-server`
