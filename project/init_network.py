@@ -1,3 +1,8 @@
+#
+# Copyright (c) 2019 Cisco Systems
+# Licensed under the MIT License
+#
+
 from app.models import *
 from api.api_requests.apic_access_module.dnaapicem import apic_get_X_auth_token
 from api.api_requests.devices_info import apic_devices_info
@@ -11,7 +16,7 @@ from requests.exceptions import Timeout
 from django.db import IntegrityError
 from django.core.exceptions import ObjectDoesNotExist
 
-DEF_NET_TYPES = ('DNA', 'APIC')
+DEF_NET_TYPES = ('DNA-C', 'APIC-EM')
 DEF_USER_ROLES = ('Admin', 'CIO', 'ITDirector', 'DevOps')
 DEF_ISSUE_TYPES = ('configuration_changed', 'traffic', 'unreachable', 'unknown')
 DEF_TICKET_STATUSES = ('close', 'in_progress', 'new', 'rejected')

@@ -1,3 +1,8 @@
+#
+# Copyright (c) 2019 Cisco Systems
+# Licensed under the MIT License
+#
+
 import django.views.generic
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, redirect

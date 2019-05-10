@@ -47,7 +47,46 @@ In developer mode, open project in IDE/terminal
 
 `git clone https://github.com/oborys/DNAC-Monitoring-App.git`
 
-then open file usage.txt and run commands
+then run commands (also you can find)
+
+`python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+./manage.py migrate`
+
+
+`cd app/vueapp
+npm i
+npm run build
+cd ../..`
+
+`./manage.py collectstatic
+./manage.py createsuperuser`
+
+Password must contain at least 8 characters
+
+`./manage.py runserver`
+
+First, you need to create User profile for created superuser:
+go to http://localhost:8000/admin/
+Click on User profiles --> Add user profile --> Select user (chose superuser name that you create before) --> Select role (Admin) --> Push Save
+![](img/DNAC_App_create_user_profile.png)
+
+open new terminal tab
+install redis for mac: brew install redis
+install redis for linux: sudo apt-get install redis-server
+
+`redis-server`
+
+open new terminal tab
+
+`source venv/bin/activate
+celery -A project worker -l info`
+
+open new terminal tab
+
+`source venv/bin/activate
+celery -A project beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler`
 
 For correct using of notification module, you need to create your Bot
 [Sign-up](https://www.webex.com/pricing/free-trial.html) and [Sign-in](https://teams.webex.com/signin) in Webex Teams
@@ -57,7 +96,7 @@ Copy and save Bot's Access Token
 ![](img/DNAC_App_Bot_Token.png)
 
 Then add email credential (EMAIL_HOST, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, EMAIL_PORT) in project/settings.py
-Uncomment send_mail function in  file info_sender/email_sender.py
+Uncomment send_mail function in file info_sender/email_sender.py
 For example you can use [Gmail to send email](https://support.google.com/a/answer/176600?hl=en) from App
 
 After deployment, you need to add a network controller (DNA-C) credentials (in case of local deployment http://localhost:8000/app/#/settings)

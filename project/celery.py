@@ -1,3 +1,8 @@
+#
+# Copyright (c) 2019 Cisco Systems
+# Licensed under the MIT License
+#
+
 from __future__ import absolute_import, unicode_literals
 import os
 from celery import Celery

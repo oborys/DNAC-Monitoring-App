@@ -1,3 +1,8 @@
+#
+# Copyright (c) 2019 Cisco Systems
+# Licensed under the MIT License
+#
+
 try:
     from .apic_access_module.dnaapicem import *
 except:

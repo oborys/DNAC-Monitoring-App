@@ -1,3 +1,8 @@
+#
+# Copyright (c) 2019 Cisco Systems
+# Licensed under the MIT License
+#
+
 from django.contrib import admin
 from .models import *
 

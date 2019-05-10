@@ -1,3 +1,8 @@
+#
+# Copyright (c) 2019 Cisco Systems
+# Licensed under the MIT License
+#
+
 from django.db import models, IntegrityError
 from django.contrib.auth.models import User
 from django.dispatch import receiver

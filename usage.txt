@@ -18,15 +18,15 @@ go to http://localhost:8000/admin/
 Click on User profiles --> Add user profile --> Select user (chose superuser name that you create before) --> Select role (Admin) --> Push Save
 and create userprofile
 
-#in another terminal
+#open new terminal tab
 #install redis for mac: brew install redis
 #install redis for linux: sudo apt-get install redis-server
 redis-server
 
-#in another terminal
+#open new terminal tab
 source venv/bin/activate
 celery -A project worker -l info
 
-#in another terminal
+#open new terminal tab
 source venv/bin/activate
 celery -A project beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
