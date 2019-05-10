@@ -76,20 +76,22 @@ go to http://localhost:8000/admin/
 Click on User profiles --> Add user profile --> Select user (chose superuser name that you create before) --> Select role (Admin) --> Push Save
 ![](img/DNAC_App_create_user_profile.png)
 
-open new terminal tab
-install redis for mac: brew install redis
-install redis for linux: sudo apt-get install redis-server
+open new terminal tab and run the commands
+install redis for mac: 
+`brew install redis`
+install redis for linux: 
+`sudo apt-get install redis-server`
 
 `redis-server`
 
-open new terminal tab
+open new terminal tab and run the commands
 
 ```
 source venv/bin/activate
 celery -A project worker -l info
 ```
 
-open new terminal tab
+open new terminal tab and run the commands
 
 ```
 source venv/bin/activate
