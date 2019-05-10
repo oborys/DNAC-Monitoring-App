@@ -48,20 +48,24 @@ In developer mode, open project in IDE/terminal
 `git clone https://github.com/oborys/DNAC-Monitoring-App.git`
 
 then run commands (also you can find)
-
-`python3 -m venv venv
+```
+python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-./manage.py migrate`
+./manage.py migrate
+```
 
-
-`cd app/vueapp
+```
+cd app/vueapp
 npm i
 npm run build
-cd ../..`
+cd ../..
+```
 
-`./manage.py collectstatic
-./manage.py createsuperuser`
+```
+./manage.py collectstatic
+./manage.py createsuperuser
+```
 
 Password must contain at least 8 characters
 
@@ -80,13 +84,17 @@ install redis for linux: sudo apt-get install redis-server
 
 open new terminal tab
 
-`source venv/bin/activate
-celery -A project worker -l info`
+```
+source venv/bin/activate
+celery -A project worker -l info
+```
 
 open new terminal tab
 
-`source venv/bin/activate
-celery -A project beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler`
+```
+source venv/bin/activate
+celery -A project beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+```
 
 For correct using of notification module, you need to create your Bot
 [Sign-up](https://www.webex.com/pricing/free-trial.html) and [Sign-in](https://teams.webex.com/signin) in Webex Teams
