@@ -2,7 +2,7 @@
 [![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/oborys/DNAC-Monitoring-App)
 
   - [About this App](#about-this-app)
-  - [The main featuresg](#the-main-features)
+  - [The main features](#the-main-features)
   - [Install and run locally ](#install-and-run-locally )
   - [Test App using Cisco DevNet sandboxes](#test-app-using-cisco-devnet-sandboxes)
 
@@ -79,11 +79,11 @@ Click on User profiles --> Add user profile --> Select user (chose superuser nam
 
 open new terminal tab and run the commands
 
-install redis for mac: 
+install Redis for mac: 
 
 `brew install redis`
 
-install redis for linux: 
+install Redis for linux: 
 
 `sudo apt-get install redis-server`
 
