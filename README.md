@@ -1,9 +1,10 @@
 # DNAC Monitoring App
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/oborys/DNAC-Monitoring-App)
 
-  - [About this App](#about_this_app)
-  - [The main featuresg](#the_main_features)
-  - [Install and run locally ](#install_and_run_locally )
-  - [Test App using Cisco DevNet sandboxes](#test_app_using_cisco_devnet_sandboxes)
+  - [About this App](#about-this-app)
+  - [The main featuresg](#the-main-features)
+  - [Install and run locally ](#install-and-run-locally )
+  - [Test App using Cisco DevNet sandboxes](#test-app-using-cisco-devnet-sandboxes)
 
 ## About this App
 DNAC Monitoring App extends the basic features of [DNA-C](https://www.cisco.com/c/en/us/products/cloud-systems-management/dna-center/index.html) (Cisco Digital Network Architecture Center). This App help collect information about devices and manage network issues. This App can be useful for Enterprise and Service Providers who want to collect and store different changes about network devices, calculate and manage different indicators such as:
