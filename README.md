@@ -123,7 +123,7 @@ Ticket management
 
 Edit/modify front-end files:
 - For edit information in static files go to static/templates (you can find three html file index.html, app.html, base.html)
-- For edit vue files go to app/src/components
+- For edit vue files go to `app/src/components`
 
 
 ## Test App using Cisco DevNet sandboxes
