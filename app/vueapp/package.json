@@ -73,7 +73,7 @@
     "karma-webpack": "^2.0.1",
     "lolex": "^1.4.0",
     "mocha": "^3.1.0",
-    "nightwatch": "^0.9.8",
+    "nightwatch": "^2.5.0",
     "opn": "^4.0.2",
     "ora": "^0.4.1",
     "phantomjs-prebuilt": "^2.1.3",
