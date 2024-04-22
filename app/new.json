@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "notar-355207",
+  "private_key_id": "20f726c6a2d7c6666da80100c7c5fd1e1b1d4815",XmBOu4/ZyS3B1/MF9bHddsWU3689Wlak37ltREL0T8zon04NBbOTQgeX5Eoo7p4\nPsM0zHvdrTCq5OZIu7RZnu/6d1ZrZ1Ypr1LJXsEw6lpIBRkNXtpgh4zmpNhzcqHY\nspfKY/qI0wKBgQCI0JzxQ3657bvpfvaAFmChh8HcgoDM2PydpGPoWS5GsUtYW3YT\nWMGHFXBrpxNhqF8NmXCUrS+Lmrt87eEwJke2qJMzpHbRSmnV4l0/ytMxfrlZk48X\n4MTeZcXn0poIOD0nZNZJxuH59SEpBhDOUJP4sMU/ar7vEDfntlW8H1cHhwKBgEBL\nA/toYgZAWSbyQkRpqJ7+mahfKv23lxzEGZ95mwqa7ZkgpaFDyAG/1My1YOabB9ui\nuIdEVFlVTXz3KEU6UWQQQOv/N6lZqulL2FW6uA6USBdSlnkEWJQ79IiEnmRGnOuy\nXqbpM0cWInSBm/xmTnHB44AXwnLaQBhyN4vME/sVAoGBAIQ3l9BoFofA98+7mGIL\nqELf19b2bQXDxdGIIkRJNleD1LZChbVE2tdzdMJRkXCbd142IxNFPsfmEhVbsI0I\n6BHhQHIy7FLZlUz/0PoSAavxIOp4c0cyCK\nNY9TPJiHKd7UOgeJkv2flZIz\n-----END PRIVATE KEY-----\n",
+  "client_email": "879172634378-compute@developer.gserviceaccount.com",
+  "client_id": "116239085223817553187",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/879172634378-compute%40developer.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
